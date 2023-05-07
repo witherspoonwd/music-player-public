@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title>music!!!!!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="music.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+</head>
+
+<body>
+
+  <div id="contentBox">
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="1000" value="0" class="slider" id="durationSlider">
+    </div>
+
+    <p>Duration: <span id="durationTimer"></span></p>
+
+    <p id="whatsPlaying">Now playing: <span id="nowPlaying"></span></p>
+    <p>playstate: <span id="playState"></span></p>
+
+    
+    <button onclick="playerPlayPause()">play and pause baby!!!!</button>
+    <button onclick="playerSeekNext()">skip to the next one baby!!!!</button>
+    <button onclick="playerSeekLast()">skip to the last one baby!!!!</button>
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="1000" value="500" class="slider" id="volumeSlider">
+    </div>
+
+    <p id="volumeDisplay"></p>
+    <br><br>
+    <button onclick = "loadPlaylistToPlayer('Fragments')">fragments</button>
+    <button onclick = "loadPlaylistToPlayer('Songs')">songs</button>
+    <button onclick = "loadPlaylistToPlayer('Instrumentals')">instrumentals</button>
+    <button onclick = "loadPlaylistToPlayer('Covers')">covers</button>
+    <br>
+
+    <button onclick = "playerLoadSong(2)">load song 2</button>
+
+    <p id="tempOutput">
+      guh
+    </p>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="./howler.js"></script>
+  <script src="./music.js"></script>
+
+</body>
+
+</html>

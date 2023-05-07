@@ -1,0 +1,322 @@
+<html>
+
+<head>
+  <title>music mother fucker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="music.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+</head>
+
+<body>
+
+  
+  <div id="contentBox">
+
+    <div id="panelBox">
+        <div id="controlBox">
+          <div id="nowPlaying">
+            <div id="lcdPanel">
+              <p id="nowPlayingTitle">Loading... </p> <!-- 40 wide-->
+              <p id="durationTimer">&nbsp</p>
+            </div>
+          </div>
+
+          <div id="controlPanel">
+            <div id="playbackControls">  
+              <img class="controlButton" src="skipback.png" onclick="playerSeekLast()">
+              <img class="controlButton" id="playPauseButton" src="play.png" onclick="playerPlayPause()">
+              <img class="controlButton" src="skipforward.png" onclick="playerSeekNext()">
+            </div>
+
+            <div id="volumeControls">
+              <img class="controlButton" src="volume.png">
+              <div class="slidecontainer" id="volumecontainer">
+                <input type="range" min="0" max="1000" value="500" class="slider" id="volumeSlider">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="visualizerBox">
+          <canvas id="visualizer"></canvas>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="1000" value="0" class="slider" id="durationSlider">
+          </div>
+        </div>
+    </div>
+
+    <div id="finderBox">
+      <div id="indexBox">
+
+        <div id="currentAlbumCover"><img src="podulair.jpg"></div>
+        <!--mobileCoverBox-->
+
+        <div id="albumTitleBox">
+          <div id="albumTitle" class="titleText">You Will Never Know Why</div>
+          <div id="albumSubTitle" class="subtitletext">
+            <span id="albumReleaseDate">09.28.09</span>
+            <span id="albumTotalLength">57 min</span>
+          </div>
+          
+          <!---
+            <div id="albumReleaseDate" class="subtitletext">09.28.09</div>
+            <div id="albumTotalLength" class="subtitletext">57 min</div>
+          --->
+        </div>
+
+        <div id="playlistIndexBox">
+
+          <table id="playlistTable">
+            <tr>
+              <td class="trackNumber">1.</td>
+              <td class="titleLength">
+                <span class="songTitle">Conversations of Two</span>
+                <span class="songLength">2:41</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">2.</td>
+              <td class="titleLength">
+                <span class="songTitle">Air Supply</span>
+                <span class="songLength">4:41</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">3.</td>
+              <td class="titleLength">
+                <span class="songTitle">Forever</span>
+                <span class="songLength">3:58</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">4.</td>
+              <td class="titleLength">
+                <span class="songTitle">Acting</span>
+                <span class="songLength">7:05</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber"><img src="songplay.png"></td>
+              <td class="titleLength">
+                <span class="songTitle">Milk</span>
+                <span class="songLength">4:25</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">6.</td>
+              <td class="titleLength">
+                <span class="songTitle">Darkness</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">7.</td>
+              <td class="titleLength">
+                <span class="songTitle">To The Moon</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">8.</td>
+              <td class="titleLength">
+                <span class="songTitle">Song About a Sea</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">9.</td>
+              <td class="titleLength">
+                <span class="songTitle">Song About a Sun</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">10.</td>
+              <td class="titleLength">
+                <span class="songTitle">No Words To Be Found</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">11.</td>
+              <td class="titleLength">
+                <span class="songTitle">Pretending</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">12.</td>
+              <td class="titleLength">
+                <span class="songTitle">Misfortunes are Cruel</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">13.</td>
+              <td class="titleLength">
+                <span class="songTitle">Your World is Eternally Complete</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+            <tr>
+              <td class="trackNumber">14.</td>
+              <td class="titleLength">
+                <span class="songTitle">Female Lover</span>
+                <span class="songLength">4:10</span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+          </table>
+
+
+
+          
+        </div>
+
+        <div id="descriptionBox" class="normalText"> 
+          <p>
+          hey gues. here is a gsong a stuff for u  to lsiten to. i hoppoe you guysz
+          like it cuz i worked reallly hard anon it and stuff lmao. so yea, hiiii
+          </p>
+        </div>
+
+        <div id="lyricsBox" class="normalText">
+          <p>
+            lyrics:
+          </p>
+
+          <p>
+          Sleep on this bed<br>
+          Tossing and turning you'll never figure out a way<br>
+          Harder to be free<br>
+          When you look at me<br>
+          Hoping to find me awake on this lonely bed<br>
+          </p>
+
+          <p>
+          Sleep on this bed<br>
+          Tossing and turning you'll never figure out a way<br>
+          Harder to be free<br>
+          When you look at me<br>
+          Hoping to find me awake in this lonely bed<br>
+        </p>
+
+          <p>
+          And it's true<br>
+          You will drift away<br>
+          and I would mind<br>
+          Yes, it's true<br>
+          </p>
+
+          <p>
+          And I know<br>
+          You will drift away<br>
+          Don't you drift away<br>
+          Don't you drift away<br>
+          No I would mind<br>
+          Here's to long life<br>
+          You will drift away<br>
+          and I would mind<br>
+          Here's to you<br>
+         </p>
+
+         <p>
+          I know<br>
+          You will drift away<br>
+          and I would mind<br>
+          Yes it's true<br>
+           </p>
+
+      <p>
+          I know<br>
+          You will drift away<br>
+          Don't you drift away<br>
+          Don't you drift away<br>
+          No, I would mind<br>
+          here's to long love<br>
+          You will drift away<br>
+          and I would mind<br>
+          Here's to
+        </p>
+
+        </div>
+
+      </div>
+
+      <div id="albumBox">
+        <div id="currentAlbumCover"><img src="testcover.jpg"></div>
+        <!--desktopCoverBox-->
+        <div id="moreAlbumsBox">
+          <p>more albums n shit:</p>
+
+          <div id="albumsInQuestion">
+            <p class="albumSnippet">
+            <img id="albumOne" src="songs.png">Songs
+            </p>
+
+            <p class="albumSnippet">
+            <img id="albumOne" src="podulair.jpg">Podulair
+            </p>
+
+            <p class="albumSnippet">
+            <img id="albumOne" src="stuck.png">Stuck
+            </p>
+
+            <p class="albumSnippet">
+            <img id="albumOne" src="horizons.png">Horizons
+            </p>
+          </div>
+
+        </div>
+        <div id="moreAlbumsButton"><p><a href="hi">view all of em'</a></p></div>
+
+      </div>
+
+    </div>
+
+
+    <div id="footerBox">
+      <p>too cool for javascript? click <a href="/music.php">here</a></p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="./howler.js"></script>
+  <script src="./frontend.js"></script>
+  <script src="./player.js"></script>
+  <script src="./visualizationTest.js"></script>
+
+</body>
+
+</html>

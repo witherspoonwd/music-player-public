@@ -1,0 +1,559 @@
+@font-face {
+  font-family: 'Assisstant';
+  src: url('/css/foAssistant-VariableFont_wght.tff') format('truetype');
+}
+
+#allAlbumsInQuestion {
+  overflow-y:auto
+}
+
+@font-face {
+font-family: 'open24';
+src: url('assets/open24.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, p, li, th, td, .titleText, .subtitleText, .normalText {
+font-family: 'Assistant', Fallback, sans-serif;
+color: white;
+}
+
+body {
+background-color: rgb(18, 26, 63);
+background-image: url('assets/musicjazz.gif');
+}
+
+.controlButton:hover {
+filter: brightness(115%);
+}
+
+#contentBox {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+/*background-color: rgba(100, 100, 100, .5);*/
+/*border-style: solid;
+border-color: black;*/
+background-color: rgb(54, 82, 207);
+
+width: 60%;
+margin: 0 auto;
+}
+
+#panelBox {
+display: flex;
+flex-direction: row;
+width: 100%;
+
+height: 11vh;
+
+border-bottom: 2px solid;
+
+background-color: #182661;
+}
+
+#controlBox {
+width: 40%;
+}
+
+#nowPlaying {
+padding: 0;
+margin: 0px;
+}
+
+#nowPlaying p {
+font-family: open24, Fallback, sans-serif;
+font-size: 20px;
+padding: 0;
+margin-top: 3px;
+margin-bottom: 3px;
+
+}
+
+#lcdPanel{
+background-color: #91caff;
+border: 1px rgb(153, 153, 153) solid;
+margin: 3px;
+}
+
+#lcdPanel p {
+color:#15345c;
+white-space: pre;
+margin-left: 3px;
+margin-right: 3px;
+}
+
+#controlPanel {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+#playbackControls {
+display: flex;
+flex-direction: row;
+justify-content: left;
+}
+
+#volumeControls {
+display: flex;
+flex-direction: row;
+justify-content: right;
+}
+
+#controlPanel img {
+cursor: pointer;
+}
+
+#visualizerBox {
+justify-content: center;
+width: 60%;
+}
+
+#visualizer {
+background-color: black;
+margin-left: 1%;
+margin-right: 1%;
+width: 98%;
+height: 90%;
+margin: 3px;
+margin-bottom: 0px;
+}
+
+#durationSlider {
+height: 5%;
+width: 98%;
+}
+
+#visualizerBox {
+margin-bottom: 3px;
+}
+
+#volumecontainer {
+display:flex;
+}
+
+input[type="range"] {
+-webkit-appearance: none;
+appearance: none;
+background: transparent;
+cursor: pointer;
+width: 15rem;
+}
+
+#durationSlider {
+margin: 3px;
+margin-top: 0;
+}
+
+#volumeSlider {
+margin: auto;
+margin-right: 3px;
+width: 100%;
+}
+
+#volumeSlider::-webkit-slider-runnable-track{
+border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+background: #F5C3FF;
+height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none; /* Override default look */
+appearance: none;
+/*margin-top: -12px; /* Centers thumb on the track */
+background-color: #a063ac;
+height: 100%;
+width: 10px;    
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+filter: brightness(115%);
+}
+
+input[type="range"]::-moz-range-track {
+background: #F5C3FF;
+height: 0.5rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+border: none; /*Removes extra border that FF applies*/
+border-radius: 0; /*Removes default border-radius that FF applies*/
+background-color: #F5C3FF;
+height: 2rem;
+width: 1rem;
+}
+
+
+#finderBox {
+margin-top: 2vh;
+width: 100%;
+display: flex;
+}
+
+
+#indexBox {
+/*background-color: purple;*/
+width: 55%;
+margin-left: 2vh;
+}
+
+#albumBox {
+/*background-color: purple;*/
+width: 45%;
+}
+
+#albumTitleBox {
+width: 100%;
+display: flex;
+flex-direction: column;
+/*background-color: purple;*/
+}
+
+#albumSubTitle {
+width: 100%;
+}
+
+#albumReleaseDate {
+margin-right: 1em;
+}
+
+.songBox {
+display:flex;
+flex-direction: row;
+}
+
+#playlistTable {
+margin-top: 2%;
+border-collapse: collapse;
+}
+
+#playlistTable tr:hover td {
+background-color: rgb(110, 128, 207);
+}
+
+#playlistTable tr:hover td img {
+opacity: 1;
+}
+
+.downloadButton {
+padding-left: 2%;
+width: 50px;
+}
+
+.downloadButton img {
+cursor: pointer;
+opacity: 0;
+}
+
+.songTitle, .songLength {
+font-size: 18px;
+}
+
+.songTitle, #nojavascript, a {
+color: rgb(245, 195, 255);
+}
+
+.songTitle:hover, #nojavascript:hover, a:hover {
+color: rgb(249, 218, 255);
+}
+
+#bingusLink {
+color: #FF288C;
+}
+
+#bingusLink:hover {
+color: #ff479d;
+}
+
+.songLength {
+font-style: italic;
+font-weight: 5;
+}
+
+.titleText {
+font-size: 27px;
+}
+
+.subtitleText {
+font-size: 16px;
+}
+
+.normalText {
+font-size: 18px;
+}
+
+#albumBox {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#currentAlbumCover {
+background-color: black;
+width: 80%;
+}
+
+#moreAlbumsBox {
+/*background-color: blue;*/
+width: 80%;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+#moreAlbumsButton p a {
+color: olive;
+}
+
+#moreAlbumsButton p a:hover {
+color: green;
+}
+
+#albumsInQuestion, #allAlbumsInQuestion {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+#albumsInQuestion img, #allAlbumsInQuestion img {
+  cursor: pointer;
+  
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin-bottom: 2%;
+  
+  
+  
+  border: 2px rgb(9, 64, 116) solid;
+  /*fuck god for making me fucking flounder around like a fucking fish to fix this*/
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+
+
+}
+
+#albumsInQuestion img:hover, #allAlbumsInQuestion img:hover {
+border: 2px rgb(245, 195, 255) solid;
+}
+
+
+#allAlbumsInQuestion p {
+color: black;
+}
+
+#allAlbumsInQuestion .albumSnippet {
+ display: block;
+ width: 23%;
+}
+
+.albumSnippet {
+width: 45%;
+
+flex-direction: column;
+text-align: center;
+}
+
+#currentAlbumCover img {
+width: 100%;
+height: auto;
+
+
+border: 2px rgb(9, 64, 116) solid;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box; 
+}
+
+.albumSnippet {
+font-style: italic;
+}
+
+#footerBox {
+width: 100%;
+background-color: #182661;
+}
+
+#footerpara {
+font-size: 18px;
+margin-left: 2vh;
+}
+
+
+.trackNumber {
+width: 25px;
+text-align: center;
+cursor: pointer;
+}
+
+#albumIndexModal {
+display: none;
+align-items: center;
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modalBox {
+color: black;
+background-color: rgb(255,255,225);
+margin: auto;
+border: 1px solid #888;
+width: 50%;
+
+}
+
+#modalContentHolder {
+ 
+padding: 1.5vh;
+}
+
+#modalClose {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+padding-right: 1vh;
+cursor: pointer;
+}
+
+#allAlbumsInQuestion {
+ height: 60%;
+ overflow-y:auto
+}
+
+.normalAltText {
+font-size: 18px;
+color: black;
+}
+
+.nojscontentbox {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+/*background-color: rgba(100, 100, 100, .5);*/
+/*border-style: solid;
+border-color: black;*/
+background-color: rgb(54, 82, 207);
+
+width: 60%;
+margin: 0 auto;
+}
+
+.nojscontentbox h1 {
+text-align: center;
+font-size: 2.8vh;
+}
+
+.nojscontentbox table {
+width: 50%;
+padding: 3%;
+}
+
+.nojscontentbox table th , .nojscontentbox table td{
+text-align: left;
+}
+
+
+
+
+
+@media only screen and (max-width: 1111px) {
+
+#contentBox {
+  width: 90%;
+}
+
+.nojscontentbox {
+  width: 90%;
+}
+
+#allAlbumsInQuestion .albumSnippet {
+ width: 30%;
+}
+
+}
+
+@media only screen and (max-width: 450px) {
+body {
+  margin: 0;
+}
+
+#contentBox{
+  width: 100%;
+ }
+
+ #currentAlbumCover {
+  width: 100%;
+  margin-bottom: 5%;
+ }
+
+ #finderBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ #indexBox { 
+  width: 90%;
+  margin: 0;
+ }
+
+ #playlistTable {
+  width: 100%;
+ }
+
+ #albumBox { 
+  width: 100%;
+ }
+
+#controlBox {
+  width: 100%;
+}
+
+#nowPlaying {
+  width: 98%;
+}
+
+#lcdPanel {
+  width: 98%
+}
+
+#controlPanel {
+  width: 98%;
+}
+
+#moreAlbumsBox {
+ width: 90%
+}
+
+#panelBox {
+  flex-direction: column;
+}
+
+#allAlbumsInQuestion .albumSnippet {
+ width: 49%;
+}
+
+#visualizerBox {
+  display: none;
+}
+
+ #modalBox {
+  width: 80%;
+ }
+}

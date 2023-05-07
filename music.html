@@ -1,0 +1,136 @@
+<html>
+
+<head>
+  <title>music mother fucker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="music.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+</head>
+
+<body>
+
+
+  <div id="albumIndexModal">
+    <div id="modalBox">
+      <div id="modalClose">&times;</div>
+        <div id="modalContentHolder">
+          <p class="normalAltText">here's all of the albums:</p>
+          <div id="allAlbumsInQuestion">
+          </div>
+
+        </div>
+    </div>
+  </div>
+
+
+  <div id="contentBox">
+
+
+    <div id="panelBox">
+        <div id="controlBox">
+          <div id="nowPlaying">
+            <div id="lcdPanel">
+              <p id="nowPlayingTitle">Loading... </p>
+              <p id="durationTimer">&nbsp</p>
+            </div>
+          </div>
+
+          <div id="controlPanel">
+            <div id="playbackControls">  
+              <img class="controlButton" src="skipback.png" onclick="playerSeekLast()">
+              <img class="controlButton" src="play.png" id="playPauseButton" onclick="playerPlayPause()">
+              <img class="controlButton" src="skipforward.png" onclick="playerSeekNext()">
+            </div>
+
+            <div id="volumeControls">
+              <img class="controlButton" id="volumeButton" src="volume.png" onclick="playerMuteVolume()">
+              <div class="slidecontainer" id="volumecontainer">
+                <input type="range" min="0" max="1000" value="500" class="slider" id="volumeSlider">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="visualizerBox">
+          <canvas id="visualizer"></canvas>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="1000" value="0" class="slider" id="durationSlider">
+          </div>
+        </div>
+    </div>
+
+
+    <div id="finderBox">
+      <div id="indexBox">
+        
+        <div id="albumTitleBox">
+          <div id="albumTitle" class="titleText"></div>
+          <div id="albumSubTitle" class="subtitletext">
+            <span id="albumReleaseDate"></span>
+            <span id="albumTotalLength"></span>
+          </div>
+          
+          <!---
+            <div id="albumReleaseDate" class="subtitletext">09.28.09</div>
+            <div id="albumTotalLength" class="subtitletext">57 min</div>
+          --->
+        </div>
+
+        <div id="playlistIndexBox">
+
+          <table id="playlistTable">
+
+            <tr>
+              <td class="trackNumber"></td>
+              <td class="titleLength">
+                <span class="songTitle"></span>
+                <span class="songLength"></span>
+              </td>
+              <td class="downloadButton"><img src="download.png"></td>
+            </tr>
+
+          </table>
+
+        </div>
+
+        <div id="releaseDateBox" class="normalText"></div>
+
+        <div id="descriptionBox" class="normalText"> </div>
+
+        <div id="lyricsBox" class="normalText"></div>
+
+      </div>
+
+      <div id="albumBox">
+        <!--<div id="currentAlbumCover"><img id="currentAlbumCoverIMG"></div>-->
+        <div id="moreAlbumsBox">
+          <p class="normalText">more albums n shit:</p>
+          <div id="albumsInQuestion"></div>
+        </div>
+        <div><p><a id="moreAlbumsButton">view all of em'</a></p></div>
+
+      </div>
+
+    </div>
+
+
+    <div id="footerBox">
+      <p id="footerpara"><a id="bingusLink" href="/bingus/index.html">Click here for Bingus!</a> too cool for javascript? click <a id="nojavascript" href="music.php">here</a></p>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  
+  <script src="date.format.js"></script>
+  <script src="./howler.js"></script>
+
+  <script src="./player-new.js"></script>
+
+  <!-- <script src="./frontend.js"></script>
+  <script src="./player.js"></script>
+  <script src="./visualizationTest.js"></script> -->
+  
+</body>
+</html>
