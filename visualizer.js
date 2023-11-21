@@ -17,11 +17,10 @@ function animate() {
   analyser.getByteFrequencyData(dataArray);
   localArray = [...dataArray];
 
-  //THIS IS WHERE SHIT GETS DRAWN BABY////////////////
   x = 0;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   var barHeight;
-  var barWidth = canvas.width / (bufferLength - bufferLengthOffset); //determines bar width (LOL OBVIOSLY YOU STUPID FUCK. YOU ARE AN IDIOT.)
+  var barWidth = canvas.width / (bufferLength - bufferLengthOffset);
 
 
   for (let i = 0; i < bufferLength - bufferLengthOffset; i++) {
